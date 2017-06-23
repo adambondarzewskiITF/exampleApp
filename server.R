@@ -356,9 +356,6 @@ shinyServer(function(input, output, session) {
     start_date <- date_range[1]
     end_date <- date_range[2]
     
-    DT_display <- DT_formatted[  Day >= start_date & Day <= end_date
-                                 , !c('CPL', 'CR', 'CPC', 'CTR'), with = FALSE]
-    
     rpivotTable(  data =  DT_display,  rows = c( "Country"), cols = c("ProductGroup")
                   , vals = "ConversionsPublisher", aggregatorName = "Sum", rendererName = "Heatmap", color = 'blue')
   })
