@@ -356,7 +356,7 @@ shinyServer(function(input, output, session) {
     start_date <- date_range[1]
     end_date <- date_range[2]
     
-    rpivotTable(  data =  DT_display,  rows = c( "Country"), cols = c("ProductGroup")
+    rpivotTable(  data =  DT_formatted,  rows = c( "Country"), cols = c("ProductGroup")
                   , vals = "ConversionsPublisher", aggregatorName = "Sum", rendererName = "Heatmap", color = 'blue')
   })
 }
