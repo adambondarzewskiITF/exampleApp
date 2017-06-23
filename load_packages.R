@@ -1,4 +1,4 @@
-library(utilitiesAdam)
+library(utilitiesAdamExample)
 library(datasets)
 
 library(shinydashboard)
